@@ -780,5 +780,10 @@ variable bindings (passed as `def-doom-theme's defs)."
      ,palette
      ,doom-rose-pine--face-spec))
 
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-directory load-file-name)))
+
 (provide 'doom-rose-pine-common)
 ;;; doom-rose-pine-common.el ends here
